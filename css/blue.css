@@ -1,0 +1,29 @@
+body{
+    background: url('../img/cielo.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background-color: #1787C4;
+}
+
+#menu ul li:hover{
+    background-color: #1787C4;
+}
+
+.button-more{
+    background-color: #1787C4;
+}
+
+form input[type="submit"], #close{
+    background: #1787C4;
+    border: 1px solid #1787C4;
+}
+
+footer{
+    background: #1787C4;
+}
+
+/*Verde: 235E3D*/
+/*Azul: 1787C4*/
+/*Rojo: CA3413*/
