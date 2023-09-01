@@ -101,4 +101,45 @@ $(document).ready(() => {
     return false*/
   })
 
+  let loginBox = $('#login form')
+  let submitButton = $('#login form input[type="submit"]')
+
+  submitButton.click((e) => {
+    e.preventDefault()
+
+    let inputName = $("input[name='name']").val()
+    let inputEmail = $("input[name='email'").val()
+    let inputPass = $("input[name='password']").val()
+
+    console.log(inputName)
+    console.log(inputEmail)
+    console.log(inputPass)
+
+    let userData = {
+      name: inputName,
+      email: inputEmail,
+      password: inputPass
+    }
+
+    console.log(userData)
+
+    localStorage.setItem('userDataKey', JSON.stringify(userData))
+
+    if(localStorage.getItem('userDataKey')){
+      loginBox.fadeOut('fast')
+      $('#identify').text(`Bienvenido ${userData.name}`)
+      $('#login').append('<button id="close">Cerrar Sesion</button>')
+    }
+
+    let buttonClose = $('#close')
+    
+    buttonClose.click(() => {
+      localStorage.clear()
+      location.reload()
+    })
+  })
+
+  
+
+
 });
